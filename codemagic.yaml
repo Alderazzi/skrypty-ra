@@ -1,0 +1,34 @@
+workflows:
+  s3-upload:
+    name: Checkout and Upload to S3
+    environment:
+      groups:
+        - alderazzi
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: 'master'
+          include: true
+          source: true
+      cancel_previous_builds: true
+    scripts:
+      - name: Remove .git and .codemagic.yaml
+        script: |
+          # Remove .git directory
+          rm -rf .git
+          rm -f .codemagic.yaml
+          
+      - name: Create ZIP archive
+        script: |
+          echo "Starting ZIP creation..."
+          zip -rv arkadia-ra.zip .
+          echo "ZIP creation completed"
+          
+      - name: Upload to S3
+        script: |
+          echo "Starting S3 upload..."
+          # Upload the zip file to S3
+          aws s3 cp arkadia-ra.zip s3://$AWS_BUCKET_NAME/
+          aws s3 cp arkadia-ra.release s3://$AWS_BUCKET_NAME/ --content-type "application/json"
+          echo "S3 upload completed"

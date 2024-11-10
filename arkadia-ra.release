@@ -1,4 +1,5 @@
-{"data":{"plugin":{"version":"0.126","changelog":{
+{"data":{"plugin":{"version":"0.127","changelog":{
+"0.127":" * przeniesienie skryptow na GitHub\n * poprawienie dzialania Changeloga",
 "0.126":" * zmiana domeny dostepu do danych www",
 "0.125":" * znikanie magikow bedzie automatycznie wrzucane na dc",
 "0.124":" * gagowanie skorzastego sinego pecherza",

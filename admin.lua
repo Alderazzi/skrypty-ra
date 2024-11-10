@@ -4,11 +4,32 @@ function ra.alias.reinstall_plugin()
 end
 
 function ra.core.install_plugin()
-  expandAlias("/zainstaluj_plugin http://www.schittek.eu/download/d2cce68e109aed17c4cfd3e5e7504a63/arkadia-ra.zip")
+  expandAlias("/zainstaluj_plugin https://skrypty-ra.s3.eu-west-1.amazonaws.com/arkadia-ra.zip")
 end
 
-function ra.core.uninstall_plugin()
+function ra.core.uninstall_plugin() 
   expandAlias("/odinstaluj_plugin arkadia-ra")
+end
+
+function compareVersions(v1, v2)
+  local pattern = "%d+"
+  local iter1 = v1:gmatch(pattern)
+  local iter2 = v2:gmatch(pattern)
+  
+  while true do
+      local num1 = iter1()
+      local num2 = iter2()
+      
+      if not num1 and not num2 then return 0 end      -- versions are equal
+      if not num1 then return -1 end                  -- v1 is shorter (older)
+      if not num2 then return 1 end                   -- v2 is shorter (older)
+      
+      num1 = tonumber(num1)
+      num2 = tonumber(num2)
+      
+      if num1 > num2 then return 1 end
+      if num1 < num2 then return -1 end
+  end
 end
 
 function ra.core.check_plugin_update(show)
@@ -39,11 +60,12 @@ function ra.core.check_plugin_update(show)
       cecho("\n<SlateGray>Bledy zglaszaj na <light_blue>#skrypty")
       cecho("\n<SlateGray>Changelog:\n")
       for k,v in spairs(ra.tmp.changelog) do
-        if tonumber(k) > tonumber(ra.version) then
+        if compareVersions(k, ra.version) > 0 then
           cecho("\n<SlateGray>"..k)
           cecho("\n<SlateGray>"..v)
         end
       end
+      cecho("\n\n")
     else
       if show then
         scripts:print_log("Brak nowej wersji pluginu 'arkadia-ra' (obecnie uzywana wersja to "..ra.version..")")

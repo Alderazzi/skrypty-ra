@@ -2,7 +2,7 @@ cecho("\n<CadetBlue>(ra)<tomato>: Laduje plugin arkadia-ra\n")
 
 -- definicja globalnych zmiennych
 ra = { 
-  version = "0.126",
+  version = "0.127",
 
   test_stage = false,
   debug = false,
@@ -133,7 +133,7 @@ ra = {
   orders_json_file_path = getMudletHomeDir() .. "/ra_orders.json",
   
   download_domain = "https://ra.codefx.net",
-  download_plugin_domain = "http://www.schittek.eu",
+  download_plugin_domain = "https://skrypty-ra.s3.eu-west-1.amazonaws.com",
   download_files = {
     enemies = { 
       name = "wrogowie Alderazzi",
@@ -169,7 +169,7 @@ ra = {
     },    
     plugin  = {
       name = "arkadia-ra",
-      source = "/download/d2cce68e109aed17c4cfd3e5e7504a63/arkadia-ra.release",
+      source = "/arkadia-ra.release",
       table = "plugin",
       target_file = getMudletHomeDir() .. "/arkadia-ra.release",
       active = true,
