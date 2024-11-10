@@ -1,0 +1,171 @@
+/lua ateam = {}
+/lua ateam.team_names = {	Dowodca = true,	Gracz1 = true,	Gracz2 = true,	Gracz3 = true,	Maorr = true,	Alagor = true,}
+/lua display("Druzyna:", ateam.team_names)
+
+Zaslony:
+
+Zaslaniasz ty:
+
+/fake Zrecznie zaslaniasz Gracza1 przed ciosami jakiegos gracza.
+/fake Z wprawa stajesz pomiedzy jakims graczem a innym graczem, przyjmujac na siebie nadchodzace ciosy.
+/fake Stajesz u boku Gracza1, gotow w kazdej chwili zaslonic Gracza1 przed nadchodzacym niebezpieczenstwem.
+/fake Zdecydowanym krokiem wysuwasz sie przed jakiego gracza, zimnym spojrzeniem dajac wszystkim do zrozumienia, ze moga sie do nego zblizyc jedynie po twoim trupie.
+
+Ktos zaslania kogos:
+
+/fake Na rozkaz Dowodcy, Gracz2 zrecznie zaslania Gracza2 przed ciosami jakiegos przeciwnika.
+/fake Na rozkaz kogos, ktos zrecznie zaslania innego gracza przed ciosami jakiegos przeciwnika.
+
+/fake Gracz1 z wprawa staje pomiedzy toba a kims tam, przyjmujac na siebie nadchodzace ciosy.
+
+/fake Ktos zrecznie zaslania kogos przed twoimi ciosami.
+/fake Gracz2 zrecznie zaslania Gracza3 przed twoimi ciosami.
+
+/fake Gracz2 staje u twojego boku, gotow w kazdej chwili zaslonic cie przed nadchodzacym niebezpieczenstwem.
+
+(^[ >]*([a-zA-Z (),!]+) z wprawa staje pomiedzy .* a .*, przyjmujac na siebie nadchodzace ciosy\.$)
+(^[ >]*[\[a-zA-Z (),!\]]+ z mrozacym krew w zylach spojrzeniem zdecydowanym krokiem wysuwa sie przed [\[a-zA-Z (),!\]]+ i opierajac dlon na trzonku [a-z ]+, daje do zrozumienia, ze kazdy kto zechce sie do (niej|niego) zblizyc, uczyni to jedynie po (jego|jej) trupie\.$)
+
+/fake Masz przy sobie wodke, bialy trojkatny flakonik, srebrny trojkatny flakonik, puprpurowy trojkatny flakonik, niebieski trojkatny flakonik, zolty kwadratowy flakonik, bialy kwadratowy flakonik, czerwony pieciokatny flakonik, zielony pieciokatny flakonik, puprpurowy szesciokatny flakonik, pomaranczowy szesciokatny flakonik, czerwony szesciokatny flakonik, szmaragdowy szesciokatny flakonik, czarny maly flakonik, bimber i jakas zagryche.
+  
+
+/fake Rzucasz sie na nerwowego mlodego mezczyzne przebijajac sie przez jego ochrone.
+/fake Maorr rzuca sie na wielkiego zezowatego mezczyzne przebijajac sie przez jego ochrone.
+/fake Bezskutecznie rzucasz sie na muskularnego garbatego karla, probujac przebic sie przez jego ochrone.
+/fake Maorr rzuca sie na bladolicego zacietego mezczyzne, bezskutecznie probujac przebic sie przez jego ochrone.
+/fake Probujesz zaslonic Alagora przed ciosami rudowlosego zdeformowanego mezczyzny, jednak nie jestes w stanie tego uczynic.
+/fake Zrecznie zaslaniasz Alagora przed ciosami rudowlosego zdeformowanego mezczyzny.
+/fake Alagor zrecznie zaslania Maorra przed ciosami wyszkolonego groznego mezczyzny.
+/fake Alagor probuje zaslonic Maorra przed ciosami wojowniczego jednookiego mezczyzny, jednak nie jest w stanie tego uczynic.
+/fake Alagor zrecznie zaslania Maorra przed ciosami wyszkolonego groznego mezczyzny.
+/fake Alagor probuje zaslonic Maorra przed ciosami wojowniczego jednookiego mezczyzny, jednak nie jest w stanie tego uczynic.
+
+/fake Brudny gruby karzel probuje zaslonic smierdzacego malego karla przed twoimi ciosami, jednak nie jest w stanie tego uczynic.
+/fake Ezheer probuje zaslonic cie przed ciosami oszalalego szkieletu, jednak nie jest w stanie tego uczynic.
+
+/fake Zrecznie zaslaniasz Alagora przed ciosami rudowlosego zdeformowanego mezczyzny.
+/fake Probujesz zaslonic Alagora przed ciosami rudowlosego zdeformowanego mezczyzny, jednak nie jestes w stanie tego uczynic.
+/fake Alagor zrecznie zaslania Maorra przed ciosami wyszkolonego groznego mezczyzny.
+/fake Alagor probuje zaslonic Maorra przed ciosami wojowniczego jednookiego mezczyzny, jednak nie jest w stanie tego uczynic.
+/fake Rzucasz sie na nerwowego mlodego mezczyzne przebijajac sie przez jego ochrone.
+/fake Maorr rzuca sie na wielkiego zezowatego mezczyzne przebijajac sie przez jego ochrone.
+/fake Bezskutecznie rzucasz sie na muskularnego garbatego karla, probujac przebic sie przez jego ochrone.
+/fake Maorr rzuca sie na bladolicego zacietego mezczyzne, bezskutecznie probujac przebic sie przez jego ochrone.
+
+/fake Valghor omija nieskuteczny blok wysokiego kamiennego gargulca.
+/fake Valghor omija nieskuteczny blok przygarbionego kamiennego gargulca.
+/fake Udaje ci sie ominac nieskuteczny blok przygarbionego kamiennego gargulca.
+
+/fake Jest w przyblizeniu jedenasta rano, dwudziesty osmy dzien pory Saovine wedlug rachuby czasu Starszego Ludu.
+/fake Jest w przyblizeniu szosta nad ranem, po wschodzie slonca, czterdziesty czwarty dzien pory Velen (wczesna jesien) wedlug rachuby czasu Starszego Ludu.
+/fake Jest w przyblizeniu czwarta wieczorem, czterdziesty piaty dzien pory Velen wedlug rachuby czasu Starszego Ludu.
+
+/fake Jest w przyblizeniu dziewiata nad ranem, po wschodzie slonca w Festtag, dzien Hexentag wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu pierwsza po poludniu w Festtag, dzien Hexentag wedlug Kalendarza Imperialnego.
+
+        
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Nachhexen wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Nachhexen wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty drugi dzien miesiaca Nachhexen wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Jahrdrung wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Jahrdrung wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Jahrdrung wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Pflugzeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Pflugzeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Pflugzeit wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Sigmarszeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Sigmarszeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Sigmarszeit wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Sommerzeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Sommerzeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Sommerzeit wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Vorgeheim wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Vorgeheim wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Vorgeheim wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Nachgeheim wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Nachgeheim wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Nachgeheim wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Erntezeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Erntezeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Erntezeit wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Brauzeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Brauzeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Brauzeit wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Kaltezeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Kaltezeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Kaltezeit wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Ulrichszeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Ulrichszeit wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Ulrichszeit wedlug Kalendarza Imperialnego.
+
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, jedenasty dzien miesiaca Vorhexen wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, dwudziesty dzien miesiaca Vorhexen wedlug Kalendarza Imperialnego.
+/fake Jest w przyblizeniu czwarta po poludniu w Wallentag, trzydziesty trzeci dzien miesiaca Vorhexen wedlug Kalendarza Imperialnego.
+
+ra.alias.add_keygivers_drop("Daxia#zardzewialy duzy klucz")
+
+/fake Siadasz na malym odkrytym wozie.
+/fake Przeciez woz juz jedzie.
+/fake Poza toba na malym odkrytym wozie siedzi wiekowy zasepiony mezczyzna.
+/fake Dojechaliscie do rozdrozy.
+/fake Nie ma tu zadnej drogi, ktora mozna by dalej jechac.
+
+-- testy dla obslugi wozu
+/fake Wynajmujesz ciezki woz, placac dwadziescia piec zlotych monet kosztu najmu oraz jedna mithrylowa monete zwrotnej kaucji.
+/fake Siadasz na malym odkrytym wozie.
+/fake Wraz z tlustym mezczyzna jedziesz malym odkrytym wozem na wschod.
+/fake Maly odkryty woz zatrzymuje sie.
+/fake Przeciez woz juz jedzie.
+/fake Poza toba na maly odkrytym wozie siedzi ogolony gnom i biala myszka.
+/fake Zsiadasz z malego odkrytego wozu.
+
+/fake Zwracasz maly odkrty woz po terminie odzyskujac tylko czesc kaucji rowna dwudziestu pieciu zlotym monetom.
+
+/fake Dajesz glowe Helkorowi.
+/fake Helkor daje ci dwadziescia piec zlotych monet.
+/fake Helkor daje ci dwadziescia piec zlotych monet i zardzewialy duzy klucz.
+
+/fake Wysoki zarosniety mezczyzna daje ci ciemnobrazowy dlugi plaszcz i zardzewialy duzy klucz.
+/fake Wysoki zarosniety mezczyzna daje ci ciemnobrazowy dlugi plaszcz.
+
+/fake Pracowity energiczny gnom gwaltownie gestykulujac mowi szybko do ciebie: Tak,MamPewnePilneZamowienie.PotrzebujeTrzynastuLekkichZbroiChroniacychKorpusIRamiona,PrzynajmniejSredniejJakosci.DobrzeZaplaceZaKazdaSztuke.
+/fake Pracowity energiczny gnom gwaltownie gestykulujac mowi szybko do ciebie: NaRealizacjeZamowieniaMamPietnascieDni,PozniejZapewneBedePotrzebowacCzegoInnego.
+
+/fake Pracowity energiczny gnom gwaltownie gestykulujac mowi szybko do ciebie: Tak, Mam Pewne Pilne Zamowienie. Potrzebuje Dwunastu Ciezkich Zbroi Chroniacych Korpus I Ramiona, Przynajmniej Sredniej Jakosci. Dobrze Zaplace Za Kazda Sztuke.
+/fake Pracowity energiczny gnom gwaltownie gestykulujac mowi szybko do ciebie: Na Realizacje Zamowienia Mam Szesnascie Dni, Pozniej Zapewne Bede Potrzebowac Czego Innego.
+
+/fake Elegancki spokojny mezczyzna syczy do ciebie: Nie, w tej chwili niczego mi nie trzeba. Zajrzyj moze za piec dni.
+
+/ustaw 5266
+/fake Elegancki spokojny mezczyzna mowi do ciebie: Tak, mam pewne pilne zamowienie. Potrzebuje dziesieciu dwurecznych broni siecznych, przynajmniej sredniej jakosci. Dobrze zaplace za kazda sztuke.
+/fake Elegancki spokojny mezczyzna mowi do ciebie: Na realizacje zamowienia mam jeden dzien, pozniej zapewne bede potrzebowac czego innego.
+
+/ustaw 1111
+/fake Ktos tam bla bla do ciebie: Tak, mam pewne pilne zamowienie. Potrzebuje szestnastu dwurecznych broni klujacych, przynajmniej sredniej jakosci. Dobrze zaplace za kazda sztuke.
+/fake Ktos tam bla bla do ciebie: Na realizacje zamowienia mam dzien, pozniej zapewne bede potrzebowac czego innego.
+
+/ustaw 8030
+/fake Elegancki spokojny mezczyzna syczy do ciebie: Nie, w tej chwili niczego mi nie trzeba. Zajrzyj moze za dzien.
+
+/ustaw 5373
+/fake Ktos tam bla bla do ciebie: Tak, mam pewne pilne zamowienie. Potrzebuje szestnastu dwurecznych broni klujacych, przynajmniej sredniej jakosci. Dobrze zaplace za kazda sztuke.
+/fake Ktos tam bla bla do ciebie: Na realizacje zamowienia mam osiem dni, pozniej zapewne bede potrzebowac czego innego.
+
+/ustaw 4721
+/fake Ktos tam bla bla do ciebie: Tak, mam pewne pilne zamowienie. Potrzebuje osmiu jednorecznych broni obuchowych, przynajmniej sredniej jakosci. Dobrze zaplace za kazda sztuke.
+/fake Ktos tam bla bla do ciebie: Na realizacje zamowienia mam pietnascie dni, pozniej zapewne bede potrzebowac czego innego.
+
+
+/fake Ktos tam bla bla do ciebie: Tak, mam pewne pilne zamowienie. Potrzebuje czterech dwurecznych toporow, przynajmniej sredniej jakosci. Dobrze zaplace za kazda sztuke.
+/fake Ktos tam bla bla do ciebie: Na realizacje zamowienia mam siedem dni, pozniej zapewne bede potrzebowac czego innego.
+

@@ -1,0 +1,3541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MudletPackage>
+<MudletPackage version="1.001">
+	<TriggerPackage>
+		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>astrolabium</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>rozpoznanie kierunku teleskopu</name>
+				<script>trigger_rozpoznanie_kierunku_teleskopu()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Spogladasz przez teleskop skierowany obecnie na (.*) przypatrujac sie tej czesci nieba i probujesz przy obecnej pogodzie wypatrzec jakies charakterystyczne ksztalty.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="yes" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>rozpoznanie gwiazdozbioru</name>
+				<script> trigger_rozpoznanie_gwiazdozbiorow()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>gwiazdozbior przypominajacy ([a-z ]+?)(?=,|\.| oraz )</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>rozpoznanie godziny</name>
+				<script>trigger_rozpoznanie_godziny_astrolabium()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>.*Pokretlo podpisane GODZINA zostalo ustawione na wartosc ([0-9]+).$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>rozpoznanie dnia</name>
+				<script>trigger_rozpoznanie_dnia_astrolabium()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>.*Pokretlo podpisane DZIEN zostalo ustawione na wartosc ([0-9]+).$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>sprawdzaj teleskop</name>
+				<script>coroutine.resume(Astrolabium.coroutine_id)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Wchodzisz na podest.$</string>
+					<string>^Teleskop przestaje sie obracac. Jest teraz skierowany na .*.$</string>
+					<string>^Teleskop juz jest skierowany na .*.$</string>
+					<string>^Spogladasz przez teleskop.*$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>kopula zamknieta</name>
+				<script>Astrolabium.telescope.cupola_open = false
+coroutine.resume(Astrolabium.coroutine_id)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>.* Jej skrzydla sa teraz zamkniete.$</string>
+					<string>^Przykladasz sile by przekrecic korbe lecz ta stawia opor. Najwyrazniej nie da sie jej juz bardziej przekrecic.$</string>
+					<string>^Skrzydla kopuly zamykaja sie.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>kopula otwarta</name>
+				<script>Astrolabium.telescope.cupola_open = true
+coroutine.resume(Astrolabium.coroutine_id)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Krecisz powoli korba w .* i skrzydla kopuly ociezale zaczynaja sie rozchylac.$</string>
+					<string>^Skrzydla kopuly rozchylaja sie umozliwiajac wygodna obserwacje gwiazd.$</string>
+					<string>.* rozchylone umozliwiajac wygodna obserwacje gwiazd.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>0</integer>
+				</regexCodePropertyList>
+			</Trigger>
+		</TriggerGroup>
+		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>znaki ra</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>puszczanie ra</name>
+				<script>if ateam.release_guards == false and ra.auto_switch_releasing_guards == true then
+  ateam:switch_releasing_guards()
+end</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>wykonuje gesty oznaczajace "bezpiecznie" i "zaslon".$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>zaslony ra</name>
+				<script>if ateam.release_guards == true and ra.auto_switch_releasing_guards == true then
+  ateam:switch_releasing_guards()
+end</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>wykonuje gesty oznaczajace "wrog" i "zaslon".$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+		</TriggerGroup>
+		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>ra</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>hint na kaftan</name>
+				<script>selectString("Zakladasz luskowy czerwonawy kaftan.",1)
+creplace("Zakladasz luskowy czerwonawy kaftan. &lt;yellow&gt;(podpal mnie)")
+</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Zakladasz luskowy czerwonawy kaftan.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>npce_zlecenia</name>
+				<script>scripts.utils.bind_functional("zapytaj sprzedawce o prace", true)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>racowity energiczny gnom</string>
+					<string>ednooki opalony mezczyzna</string>
+					<string>erwowy czujny gnom</string>
+					<string>legancki spokojny mezczyzna</string>
+					<string>niady muskularny mezczyzna</string>
+					<string>tary siwy mezczyzna</string>
+					<string>ympatyczny pogodny mezczyzna</string>
+					<string>apracowany gruby mezczyzna</string>
+					<string>ysoki mocny mezczyzna</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>sprawdz szybkosc jazdy pojazdem</name>
+				<script>trigger_plugins_jedziesz_pojazdem()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Wraz z (.*) jedziesz (.*) na (.*).$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>pojazd zatrzymuje sie</name>
+				<script>trigger_plugins_pojazd_sie_zatrzymuje()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.*) (woz|bryczka|dylizans) zatrzymuje sie.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>zsiadanie z pojazdu</name>
+				<script>trigger_plugins_zsiadasz_z_pojazdu()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Zsiadasz z (.*) (wozu|bryczki|dylizansu).$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>wypozyczenie pojazdu</name>
+				<script>trigger_plugins_wypozyczasz_pojazd()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Wynajmujesz (.*) placac (.*) kosztu najmu (.*) kaucji.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>zwrot pojazdu</name>
+				<script>trigger_plugins_zwracasz_pojazd()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Zwracasz (.*) (po|w) terminie odzyskujac (.*) kaucji (.*).$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>wsiadanie na pojazd</name>
+				<script>trigger_plugins_wsiadasz_na_pojazd()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Siadasz (na|w) (.*) (wozie|bryczce|dylizansie).$</string>
+					<string>^Przeciez (woz|bryczka|dylizans) juz jedzie.$</string>
+					<string>^Poza toba na (.*) (wozie|bryczce|dylizansie) siedzi (.*).$</string>
+					<string>^Dojechaliscie do rozdrozy.$</string>
+					<string>^Nie ma tu zadnej drogi, ktora mozna by dalej jechac.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>obwiesie tunika dc</name>
+				<script>local key = ""
+if matches[2] ~= nil then
+  key = matches[2]
+end
+
+local function send_notify_by_obwiesie_dc()
+  local loc = "("..amap.curr.area.." [id:"..amap.curr.id.."])"
+  if string.len(key) &gt; 0 then
+    ra.core.add_text_dc("Biala bretonska tunika oddana obwiesiom. "..loc, ra.dc_webhook_magiken)
+    ra.alias.add_keygivers_drop("Obwiesie#"..ra.core.get_key_by_string(key))
+  else
+    ra.core.add_text_dc("Biala bretonska tunika oddana obwiesiom - bez klucza. "..loc, ra.dc_webhook_magiken)
+  end
+end
+
+scripts.utils.bind_functional_call(function() send_notify_by_obwiesie_dc() end, "Dodaj wpis oddania tuniki obwiesiom na DC Alderazzi.", false)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Wysoki zarosniety mezczyzna daje ci ciemnobrazowy dlugi plaszcz i (.*).$</string>
+					<string>^Wysoki zarosniety mezczyzna daje ci ciemnobrazowy dlugi plaszcz.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>interpretacja braku zlecenia</name>
+				<script>local amount = string.trim(matches[3])
+if string.len(amount) == 0 then
+	amount = "jeden"
+end			
+local stime = matches[4]
+ra.tmp.orders_pre = "brak zamowienia"
+if stime == "dzien" or stime == "Dzien" or stime == "dni" or stime == "Dni" then
+	ra.core.add_order(amount, 1)
+else
+	ra.core.add_order(amount, 2)
+end
+ra.alias.show_orders_info()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.*)do ciebie: Nie, w tej chwili niczego mi nie trzeba. Zajrzyj moze za (.*)(dzien|dni|godzine|godzin).</string>
+					<string>^(.*)do ciebie: Nie, W Tej Chwili Niczego Mi Nie Trzeba. Zajrzyj Moze Za (.*)(Dzien|Dni|Godzine|Godzin).</string>
+					<string>^(.*)do ciebie: Nie,WTejChwiliNiczegoMiNieTrzeba.ZajrzyjMozeZa(.*)(Dzien|Dni|Godzine|Godzin).</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>interpretacja zlecenia</name>
+				<script>local amount = string.trim(matches[3])
+if string.len(amount) == 0 then
+	amount = "jeden"
+end
+local stime = matches[4]
+if stime == "dzien" or stime == "Dzien" or stime == "dni" or stime == "Dni" then
+	ra.core.add_order(amount, 1)
+else
+	ra.core.add_order(amount, 2)
+end
+ra.alias.show_orders_info()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.*) do ciebie: Na realizacje zamowienia mam (.*)(dzien|dni|godzine|godzin), pozniej zapewne bede potrzebowac czego innego.$</string>
+					<string>^(.*) do ciebie: Na Realizacje Zamowienia Mam (.*)(Dzien|Dni|Godzine|Godzin), Pozniej Zapewne Bede Potrzebowac Czego Innego.$</string>
+					<string>^(.*) do ciebie: NaRealizacjeZamowieniaMam(.*)(Dzien|Dni|Godzine|Godzin),PozniejZapewneBedePotrzebowacCzegoInnego.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>odczytanie zlecenia</name>
+				<script>ra.tmp.orders_pre = matches[3]</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.*) do ciebie: Tak, mam pewne pilne zamowienie. Potrzebuje (.*). Dobrze zaplace za kazda sztuke.$</string>
+					<string>^(.*) do ciebie: Tak,MamPewnePilneZamowienie.Potrzebuje(.*).DobrzeZaplaceZaKazdaSztuke.$</string>
+					<string>^(.*) do ciebie: Tak, Mam Pewne Pilne Zamowienie. Potrzebuje (.*). Dobrze Zaplace Za Kazda Sztuke.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>oddanie glowy helkorowi dc</name>
+				<script>ra.tmp.helkor = matches[2]
+
+local function send_notify_by_helkor_dc()
+  local loc = "("..amap.curr.area.." [id:"..amap.curr.id.."])"
+  if string.len(ra.tmp.helkor) &gt; 30 then
+    local t = string.split(ra.tmp.helkor, " i ")  
+    ra.core.add_text_dc("\\- glowa "..loc, ra.dc_webhook_magiken)
+    ra.alias.add_keygivers_drop("Helkor#"..ra.core.get_key_by_string(t[2]))
+  else
+    ra.core.add_text_dc("\\- glowa - bez klucza. "..loc, ra.dc_webhook_magiken)
+  end
+  ra.tmp.helkor = nil
+end
+
+scripts.utils.bind_functional_call(function() send_notify_by_helkor_dc() end, "Dodaj wpis oddania glowy Khelora na DC Alderazzi.", false)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(?:Czarnowlosy grozny mezczyzna|Helkor) daje ci (.*).$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>odciecie glowy khelora na dc</name>
+				<script>scripts.utils.bind_functional_call(function() ra.alias.add_keygivers_drop("Khelor#glowa") end, "Dodaj wpis o glowie Khelora na DC/www.", false)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Odcinasz glowe od ciala roslego blekitnookiego mezczyzny.$</string>
+					<string>^Odcinasz glowe od ciala Khelora.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>dzien roku w ishtar</name>
+				<script>local yd = 0
+--display(2, matches[2], 3, matches[3], 4, matches[4], 5, matches[5], 6, matches[6], 7, matches[7], 8,matches[8])
+
+local H = matches[3]
+local h = ra.calendar.string2int[matches[3]]
+local pd = matches[4]
+local m = matches[6]
+
+-- 
+local d = ra.calendar.string2int[matches[5]]
+-- wylicza dzien roku na podstawie "czas" (-1 jest ze wzgledu na poczatek dnia roku (z definicji dnia miesiaca) - dzien miesiaca na podstawe triggera 
+local yd = ra.calendar.ishtar.settings.first_day_of_calparts[m] + d - 1
+
+if pd == "wieczorem" or pd == "poludniu" or (pd == "nocy" and h &gt; 7) then
+  h = h+12
+end
+
+ra.calendar.ishtar.data.precision = 119 -- po "czas" precyzja zmienia sie na max blad czyli 119 sek
+ra.calendar.ishtar = ra.calendar.refresh_calendar(ra.calendar.ishtar, yd, h)
+
+--display("dzien", d, "miesiac", m, "dzien roku", yd, "godzina pory", H, "pora dnia", pd, "godzina row", h)
+</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>(^Jest w przyblizeniu (\w+) (?:|w|po|przed|nad|poznym)\s*(dzien|nocy|poludniu|poludniem|poludnie|rano|ranem|wieczorem).*, (.*) dzien pory (\w+))</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>dzien roku w imperium</name>
+				<script>local cm = table.size(matches)
+
+--display("count.."..table.size(matches), 3, matches[3], 4, matches[4], 5, matches[5], 6, matches[6], 7, matches[7], 8,matches[8])
+
+local yd = 0
+
+local H = matches[3]
+local h = ra.calendar.string2int[matches[3]]
+local pd = matches[4]
+
+local m = matches[5]
+
+if cm &gt; 5 then
+  m = matches[6]
+end
+
+local d = "-"
+
+local special_imperial_days = {"Hexentag", "Mitterfruhl", "Sonnenstill", "Geheimnistag", "Mitterherbst" }
+
+-- przy dniach specjalnych dzien roju jest jednoznaczny na podstawie definicji calparts
+if table.contains(special_imperial_days, m) then 
+  yd = ra.calendar.imperial.settings.first_day_of_calparts[m]
+else
+  d = ra.calendar.string2int[matches[5]]
+-- wylicza dzien roku na podstawie "czas" (-1 jest ze wzgledu na poczatek dnia roku (z definicji dnia miesiaca) - dzien miesiaca na podstawe triggera  
+  yd = ra.calendar.imperial.settings.first_day_of_calparts[m] + d - 1
+end
+
+if pd == "wieczorem" or pd == "poludniu" or (pd == "nocy" and h &gt; 8) then
+  h = h+12
+end
+
+ra.calendar.imperial.data.precision = 119 -- po "czas" precyzja zmienia sie na max blad czyli 119 sek
+ra.calendar.imperial = ra.calendar.refresh_calendar(ra.calendar.imperial, yd, h)
+--display("dzien", d, "miesiac", m, "dzien roku", yd, "godzina pory", H, "pora dnia", pd, "godzina row", h)
+
+</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>(^Jest w przyblizeniu (\w+) (?:|w|po|przed|nad|poznym)\s*(dzien|nocy|poludniu|poludniem|poludnie|rano|ranem|wieczorem).*, (.*) dzien miesiaca (\w+))</string>
+					<string>(^Jest w przyblizeniu (\w+) (?:|w|po|przed|nad|poznym)\s*(dzien|nocy|poludniu|poludniem|poludnie|rano|ranem|wieczorem).*, (.*), dzien (\w+))</string>
+					<string>(^Jest w przyblizeniu (\w+) (?:|w|po|przed|nad|poznym)\s*(dzien|nocy|poludniu|poludniem|poludnie|rano|ranem|wieczorem).*, dzien (\w+))</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>czas imperium eventy</name>
+				<script>if matches[3] == "noc Geheimnisnacht" then
+  --ra.calendar.imperial.data.precision = 0
+  --ra.calendar.imperial = ra.calendar.refresh_calendar(ra.calendar.imperial, 201, 17)
+  --- todo: pokolorowac linijke i dodac notify
+end
+if matches[3] == "pierwszy dzien nowego roku" then
+  ra.calendar.imperial.data.precision = 0
+  ra.calendar.imperial = ra.calendar.refresh_calendar(ra.calendar.imperial, 1, 8)
+end</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Ostatnie promienie zachodzacego slonca (.*) W Starym Swiecie rozpoczyna sie (.*).$</string>
+					<string>^Pierwsze promienie wschodzacego slonca (.*). W Starym Swiecie rozpoczyna sie (.*).$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>esencja zycia</name>
+				<script>selectString(matches[2], 1)
+fg("slate_blue")
+deselect()
+resetFormat()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#0000ff</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(Na twoich palcach osadza sie odrobina mlecznobialego pylu.)$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>kolorowanie zatrutej broni</name>
+				<script>selectString(matches[2], 1)
+creplace("&lt;ansi_light_green&gt;"..matches[2].." (Uwaga! Trujacy!)&lt;reset&gt;")
+deselect()
+resetFormat()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>.* (waski zebaty palasz) .*</string>
+					<string>.* (dlugi krwisty sztylet) .*</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>0</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>kolorowanie na kolor kluczodajek</name>
+				<script>selectString(matches[2], 1)
+fg("purple")
+deselect()
+resetFormat()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>.* (srebrna broszka).*</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>dylek varieno</name>
+				<script>selectString("dylizans",1)
+creplace("dylizans (Varieno)")</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>zary (stojacy|pedzacy) dylizans</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>azurowy koscistobialy amulet</name>
+				<script>scripts.utils.bind_functional("zdejmij zalozony naszyjnik;zaloz azurowy koscistobialy amulet", false, true)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>(.*) daje ci azurowy koscistobialy amulet.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>dylek toskania</name>
+				<script>selectString("dylizans",1)
+creplace("dylizans (Toskania)")</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>tary (stojacy|pedzacy) dylizans</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ocen wage kamienia</name>
+				<script>if misc["valuing_stones"] == true then
+	  misc:add_stone_weigth()
+	end</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>Oceniasz, ze .* waz(y|a) (.*) gram.*</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>rozpoznanie monet</name>
+				<script>local m = ra.tmp.money
+ra.alias.przelicz_wycene(matches[3], false)
+ra.alias.pokaz_procent(100)
+ra.alias.pokaz_procent(90)
+ra.alias.pokaz_procent(10)
+ra.tmp.money = m</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>(.*) dostalbys (.*) monet</string>
+					<string>(.*) dostalabys (.*) monet</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>rozpoznanie monet sell</name>
+				<script>ra.alias.przelicz_wycene(matches[3], true)
+cecho("&lt;yellow&gt; =&gt; Zaktualizowano historie sprzedazy.")
+ra.alias.pokaz_procent(100)
+ra.alias.pokaz_procent(90)
+ra.alias.pokaz_procent(10)
+ra.alias.pokaz_link_czyszczenia()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>(.*)ostajesz (.*) monet</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>otul sie plaszczem</name>
+				<script>    if ateam.team_names[matches[2]] then
+        local command = "otul sie plaszczem"
+        if scripts.utils.functional_key ~= command then
+            scripts.utils.bind_functional(command, false)
+        end
+    end
+			</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.+?) .*: [Oo]tulcie\.?$</string>
+					<string>^(.+?) (?&gt;naciaga na glowe kaptur i )?otula sie szczelnie .*\.$</string>
+					<string>^(.+?) .*: Otulom se plascym\.?$</string>
+					<string>^(.+?) .*: Otulcie sie plaszczem\.?$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>zagladanie_kabinet_ra</name>
+				<script>matches.content = matches[2]
+trigger_func_skrypty_inventory_equipment_zagladanie_skrzynie()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Elegancki kabinet zawiera (.*)\.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>przecisnij sie przez krzaki</name>
+				<script>local l = ""
+for k, v in pairs(ateam.objs) do
+  if type(v) == "table" then
+    if v["team_leader"] == true then
+      l = v["desc"]
+    end
+  end
+end
+
+if matches[2] == l then
+  scripts.utils.bind_functional("przecisnij sie przez krzaki", false, true)
+end</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>(.*) ostroznie przedziera sie przez sciane galezi rosnacych tu krzakow.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>prowadz na lokacje z listu</name>
+				<script>scripts.utils.bind_functional("/prowadz "..ra.core.convert2number(matches[2]), false, false)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Dalsze informacje wydaja sie slabo czytelne. Mozesz rozroznic jedynie nastepujece znaki: (.*)</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>npce-kluczodajne2</name>
+				<script>if amap.curr.area == "Masyw Orcal" then
+	    selectString(matches[2], 1)
+	    replace(matches[2] ..  " (klucz)", true)
+	    fg("purple")
+	    deselect()
+	    resetFormat()
+	end</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>((M|m)uskularny olbrzymi czarny ork)</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>npce-kluczodajne</name>
+				<script>selectString(matches[2], 1)
+replace(matches[2] ..  " (klucz)", true)
+fg("purple")
+deselect()
+resetFormat()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#cc33ff</mFgColor>
+				<mBgColor>#000000</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>([Bb]ystry zakapturzony skaven)</string>
+					<string>([Rr]osly brazowooki mezczyzna)</string>
+					<string>([Ww]ysoki bezwzgledny czarny ork)</string>
+					<string>([Zz]ylasty zimnooki mezczyzna)</string>
+					<string>([Nn]iespokojny blady gnom)</string>
+					<string>([Ww]ysoki zarosniety mezczyzna)</string>
+					<string>([Ss]urowy szpakowaty mezczyzna)</string>
+					<string>([Ss]niady wystrojony mezczyzna)</string>
+					<string>([Ss]zmaragdowooka wychudzona kobieta)</string>
+					<string>([Ss]olidna rybacka lodz)</string>
+					<string>([Mm]igdalowooka wiotka polelfka)</string>
+					<string>([Zz]akapturzony zgarbiony mezczyzna)</string>
+					<string>([Cc]zarnowlosy wyniosly mezczyzna)</string>
+					<string>([Ss]zkaradny przygarbiony mezczyzna)</string>
+					<string>([Cc]zujny mlody mezczyzna)</string>
+					<string>([Mm]loda jasnowlosa dziewczyna)</string>
+					<string>([Zz]wrotna nieduza fusta)</string>
+					<string>([Pp]onury stary szkuner)</string>
+					<string>([Ww]ysoki zakrwawiony halfling)</string>
+					<string>([Nn]ietoperzowy plaskonosy potwor)</string>
+					<string>([Kk]rzepki opalony mezczyzna)</string>
+					<string>([Cc]zarnowlosy grozny mezczyzna)</string>
+					<string>([Nn]iebieskooki potezny mezczyzna)</string>
+					<string>([Ww]szawy jednooki mezczyzna)</string>
+					<string>([Ss]rogi raptawy mezczyzna)</string>
+					<string>([Oo]bladowany niestrudzony mezczyzna)</string>
+					<string>([Zz]enner)</string>
+					<string>([Ss]tary kamienny troll)</string>
+					<string>([Ss]zarozielony zwalisty troll)</string>
+					<string>([Pp]odstarzaly zwawy krasnolud)</string>
+					<string>([Pp]rzerosniety wielkostopy troll gorski)</string>
+					<string>([Mm]ocarny czarnobrody ogr)</string>
+					<string>([Ww]ychudzona szmaragdowooka kobieta)</string>
+					<string>(Khelor)</string>
+					<string>([Rr]osly blekitnooki mezczyzna)</string>
+					<string>(Darrepin)</string>
+					<string>([Jj]asnowlosy cnotliwy mezczyzna)</string>
+					<string>([Pp]arzywy silvan)</string>
+					<string>([Ss]rebrnobrody rogaty faun)</string>
+					<string>([Ss]inozielony przygarbiony troll)</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>benicjo</name>
+				<script>scripts.utils.bind_functional("zapytaj benicja o obecnych", true, true)
+</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>Benicjo.</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>0</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>npce_zlecenia</name>
+				<script>scripts.utils.bind_functional("zapytaj sprzedawce o prace", true)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>racowity energiczny gnom</string>
+					<string>ednooki opalony mezczyzna</string>
+					<string>erwowy czujny gnom</string>
+					<string>legancki spokojny mezczyzna</string>
+					<string>niady muskularny mezczyzna</string>
+					<string>tary siwy mezczyzna</string>
+					<string>ympatyczny pogodny mezczyzna</string>
+					<string>apracowany gruby mezczyzna</string>
+					<string>ysoki mocny mezczyzna</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>npce_zlecenia_czas</name>
+				<script>scripts.utils.bind_functional("zapytaj sprzedawce o czas", true)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>Tak, mam pewne pilne zamowienie.</string>
+					<string>Nie, w tej chwili niczego mi nie trzeba.</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>0</integer>
+					<integer>0</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ra-jedzenie-pelny</name>
+				<script>scripts.utils.bind_functional("poczestuj sie woda")
+disableTrigger("ra-jedzenie-pelny")</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>przelknac ani .* wiecej</string>
+					<string>Spostrzegasz, ze oproznil.s juz caly talerz</string>
+					<string>jednak jestes tak najedzon.</string>
+					<string>jednak jestes juz tak najedzon.</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ra-jedzenie-picie</name>
+				<script>scripts.utils.bind_functional("poczestuj sie woda", true)</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>Napelniasz szklanke woda z dzbana, zblizasz do ust i wypijasz.</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>0</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ra-jedzenie-napity</name>
+				<script>scripts.utils.bind_functional("wstan")
+disableTrigger("ra-jedzenie-napity")
+disableTrigger("ra-jedzenie-picie")</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>Nie jestes w stanie wmusic w siebie ani lyka wiecej\.</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>zagladanie_puzdro</name>
+				<script>matches.content = matches[2]
+	trigger_func_skrypty_inventory_equipment_zagladanie_skrzynie()</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Palisandrowe puzdro zawiera (.*)\.$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ra-jadalnia-jedzenie</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>Na srodku stolu stoi</string>
+					<string>Centralne miejsce stolu zajmuje</string>
+					<string>Do pomieszczenia wchodzi dziewka sluzebna z nowa</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>0</integer>
+					<integer>0</integer>
+					<integer>0</integer>
+				</regexCodePropertyList>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-zupa-le-virtu</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie zupa")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>duza, porcelanowa waza wypelniona zupa Le Virtu</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-pizza-owoce-moza</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie pizza")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string> duzy talerz zajety przez okragla pizze, pelna najrozniejszych owocow morza.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-makaron-1</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie makaronem")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>ogromna micha z zawsze goracym, parujacym makaronem.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-makaron-2</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie makaronem")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>ogromna micha z zawsze goracym, parujacym spaghetti bolognese.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-makaron-3</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie makaronem")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>ogromna micha z zawsze goracym, parujacym spaghetti z sosem genuenskim.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-makaron-4</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie makaronem")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>ogromna micha z zawsze goracym, parujacym spaghetti, ktore cale pokryte jest zolta, gesta masa</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-pierozki</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie pierozkami")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>spory polmisek wypelniony malutkimi, kwadratowymi pierozkami ravioli</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-tartinki</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie tartinka")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>spory talerz pelen malych, przyrzadzonych z wielka dbaloscia o walory estetyczne, tartinek.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-buleczki</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie buleczka")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>spory talerz pelen niezwykle intensywnie pachnacych maslanych buleczek ulozonych w zgrabny stosik.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-pizza-1</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie pizza")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>spory talerz pelen pysznej pizzy Campogrotta.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-pizza-2</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie pizza")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>spory talerz pelen pysznej pizzy Miragliano.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-pizza-3</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie szarlotka")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>spory talerz pelen pysznej szarlotki posypanej cukrem pudrem.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-pstrag</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie pstragiem")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>polmisek zawierajacy aromatycznego, pieczonego pstraga z makaronem</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>makaron-dziewka</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie makaronem")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>misa pelna parujacego makaronu i ustawia ja na stole.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-lasagne</name>
+					<script>ra_scripts:bind_eat_main_room("poczestuj sie lasagne")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>brytfanka na drewnianej podstawce, zawierajaca goraca lasagne pokryta warstwa spieczonego sera</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</Trigger>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ra-gesty</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-gest-me</name>
+					<script>deleteLine()
+ra_scripts:parse_signs("JA", nil, matches[2])</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Wykonujesz gest.*oznaczajac. (.*)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-gest-someone</name>
+					<script>if not string.find(matches[2], "wskazuje") then
+  ra_scripts:parse_signs(matches[2], nil, matches[3])
+end</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.+) wykonuje gest.*oznaczajac. (.*)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-gest-me-3rd</name>
+					<script>deleteLine()
+ra_scripts:parse_signs("JA", matches[2], matches[3])</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Wskazujesz (.*) oraz wykonujesz gest.*oznaczajac. (.*)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ra-get-someone-3rd</name>
+					<script>deleteLine()
+ra_scripts:parse_signs(matches[2], matches[3], matches[4])</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(.*) wskazuje (.*) oraz wykonuje gest.*oznaczajac. (.*)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>ra-miejscowki</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ebino</name>
+					<script>scripts.utils.bind_functional("wejdz do zagrody", false)
+</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>starajac sie nie zwracac na siebie uwagi daje susa i wskakuje za zagrode.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>viadaza</name>
+					<script>scripts.utils.bind_functional("przejdz na zaplecze", false)
+</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>starajac sie nie zwracac na siebie uwagi przechodzi na zaplecze.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>varieno</name>
+					<script>scripts.utils.bind_functional("przecisnij sie miedzy deskami", false)
+</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>asfwegasfas</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>kurhany_tilea</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>potezna_kruczowlosa_zjawa</name>
+					<script>scripts.utils.bind_functional("otworz sarkofag;wez naramienniki;wloz je do sarkofagu;wez napiersnik;wloz go do sarkofagu;wez nagolenniki;wloz je do sarkofagu;wez topor;wloz go do sarkofagu;wez miecz;wloz go do sarkofagu;wez ciezki helm z rogami;wloz go do sarkofagu;wez cwiekowana kolcza pare spodni; wloz ja do sarkofagu;sp")
+</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^[ &gt;]*Zabiles potezna kruczowlosa zjawe\.$</string>
+						<string>^[ &gt;]*[a-zA-Z !(),]+ zabil potezna kruczowlosa zjawe\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>straszliwa_rozwscieczona_zjawa</name>
+					<script>scripts.utils.bind_functional("otworz sarkofag;wez buzdygan;wloz go do sarkofagu;wez napiersnik;wloz go do sarkofagu;wez tarcze;wloz ja do sarkofagu;wez nagolenniki;wloz je do sarkofagu;wez kolczasta pare naramiennikow;wloz ja do sarkofagu;sp")
+</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^[ &gt;]*Zabiles straszliwa rozwscieczona zjawe\.$</string>
+						<string>^[ &gt;]*[a-zA-Z !(),]+ zabil straszliwa rozwscieczona zjawe\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>potworna_okrutna_zjawa</name>
+					<script>scripts.utils.bind_functional("otworz sarkofag;wez miecz;wloz go do sarkofagu;wez napiersnik;wloz go do sarkofagu;wez tarcze;wloz ja do sarkofagu;wez ciezki helm z rogami;wloz go do sarkofagu;wez nagolenniki;wloz je do sarkofagu;wez cwiekowana kolcza pare spodni; wloz ja do sarkofagu;sp")
+</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^[ &gt;]*Zabiles potworna okrutna zjawe\.$</string>
+						<string>^[ &gt;]*[a-zA-Z !(),]+ zabil potworna okrutna zjawe\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>cmentarz_campo</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>utopiec_sarkofag</name>
+					<script>selectCurrentLine()
+suffix(" (Utopiec)")
+selectString("(Utopiec)", 1)
+fg("gold")
+scripts.utils.bind_functional("zamknij sarkofag;otworz sarkofag")
+resetFormat()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(Sarkofag wykonany jest z czarnego)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>nieumarly_atak</name>
+					<script>raiseEvent("playBeep")
+scripts.utils.bind_functional("zabij nieumarlego")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile>/Users/ctarx/.config/mudlet/sounds/beep.wav</mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>((szubienicznik|utopiec|kosciotrup|struchlec).* wylazi z sarkofagu)</string>
+						<string>Spod ziemi pod progiem komnaty wylania sie przerazliwa postac!</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>szubienicznik_sarkofag</name>
+					<script>selectCurrentLine()
+suffix(" (Szubienicznik)")
+selectString("(Szubienicznik)", 1)
+fg("gold")
+scripts.utils.bind_functional("zamknij sarkofag;otworz sarkofag")
+resetFormat()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(Widzisz dlugi sarkofag pozbawiony)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>struchlec_sarkofag</name>
+					<script>selectCurrentLine()
+suffix(" (Struchlec)")
+selectString("(Struchlec)", 1)
+fg("gold")
+scripts.utils.bind_functional("zamknij sarkofag;otworz sarkofag")
+resetFormat()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(Widzisz solidny sarkofag wykonany)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>kosciotrup_sarkofag</name>
+					<script>selectCurrentLine()
+suffix(" (Kosciotrup)")
+selectString("(Kosciotrup)", 1)
+fg("gold")
+scripts.utils.bind_functional("zamknij sarkofag;otworz sarkofag")
+resetFormat()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#d7fdff</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(Widzisz surowy, prosty sarkofag)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>trad</name>
+					<script>selectCurrentLine()
+suffix(" (TRAD)")
+selectString("(TRAD)", 1)
+fg("red")
+scripts.utils.bind_functional("przeszukaj weza")
+resetFormat()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(Sarkofag jest duzy i bogato zdobiony. Na jego scianach widac zdobienia)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>plyta_sie_zamyka</name>
+					<script>scripts.utils.bind_functional("przesun plyte")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>^[ &gt;]*Kamienna plyta z przerazliwym zgrzytem zamyka wejscie do grobowca!</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>trad-blokady</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>przelacznik</name>
+						<script>selectCurrentLine()
+suffix(" (Przelacznik)")
+selectString("(Przelacznik)", 1)
+fg("gold")
+scripts.utils.bind_functional("przelacz przelacznik")
+resetFormat()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Dol sarkofagu jest opleciony rzezba wielkiego weza. Kiedy przygladasz mu sie uwazniej, zauwazasz, ze jeden z jego klow jadowych wydaje sie odcinac od ciemnoszarej glowy. Rzeczywiscie, lewy kiel weza, polozony od wewnetrznej strony rzezby, jest sprytnie ukrytym przelacznikiem.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>dzwigienka</name>
+						<script>selectCurrentLine()
+suffix(" (Dzwigienka)")
+selectString("(Dzwigienka)", 1)
+fg("gold")
+scripts.utils.bind_functional("przelacz dzwigienke")
+resetFormat()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Dol sarkofagu jest opleciony rzezba wielkiego weza. Kiedy przygladasz mu sie uwazniej, zauwazasz, ze jego rozwidlony jezyk odcina sie wyraznie na tle szarej paszczy. Rzeczywiscie, jezyk weza jest sprytnie ukryta dzwigienka.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>przycisk</name>
+						<script>selectCurrentLine()
+suffix(" (Przycisk)")
+selectString("(Przycisk)", 1)
+fg("gold")
+scripts.utils.bind_functional("wcisnij przycisk")
+resetFormat()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Dol sarkofagu jest opleciony rzezba wielkiego weza. Kiedy przygladasz mu sie uwazniej, zauwazasz, ze jedno z jego oczu wydaje sie zbyt odcinac od ciemnoszarych glowy i ogona. Rzeczywiscie, lewe oko weza, umieszczone od strony grobowca, jest sprytnie ukrytym przyciskiem.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>pokretlo</name>
+						<script>selectCurrentLine()
+suffix(" (Pokretlo)")
+selectString("(Pokretlo)", 1)
+fg("gold")
+scripts.utils.bind_functional("przekrec pokretlo")
+resetFormat()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Dol sarkofagu jest opleciony rzezba wielkiego weza. Kiedy przygladasz mu sie uwazniej, zauwazasz, ze jego koniec jego ogona ma pozioma, ciemna ryse. Po obejrzeniu go dokladnie, stwierdzasz, ze koniec ogona to sprytnie ukryte pokretlo.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>odbezpieczony_sarkofag</name>
+						<script>scripts.utils.bind_functional("otworz sarkofag;wez wszystko z sarkofagu")</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>Wyglada na to ze udalo ci sie odbezpieczyc wieko sarkofagu!</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>skrzynie</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="no" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>logowanie-zawartosci</name>
+					<script>--scripts.utils:extract_string_list(matches[2]))</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>W skrzyniach zauwazasz miedzy innymi (.*)\.$</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>swiatynia</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>zmiana</name>
+					<script>cecho("\n &lt;orange&gt;zmiana w ktorejs z twarzy")
+scripts.utils.bind_functional("ob twarz chlopca;ob twarz mezczyzny;ob twarz starca", false)</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Z wnetrza trojtwarzowej glowy posagu dochodzi krotki zgrzyt, jakby wewnatrz pracowal jakis mechanizm.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>strumien-ok</name>
+					<script>cecho("\n\n &lt;YellowGreen&gt;szeroki strumien, krzyknij, ze jest ok")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>To chyba optymalne polozenie zaworow wewnatrz glowy posagu.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>strumien-nie-ok</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#000000</mFgColor>
+					<mBgColor>#66ffcc</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>dosc zwawy strumien wody</string>
+						<string>kapie kropla wody</string>
+						<string>cieniutki strumyczek wody</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>klucz-wypadl</name>
+					<script>cecho("\n\n &lt;YellowGreen&gt;klucz wpadl do misy")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>wylatuje cos metalowego i szybko spada na dol i z pluskiem wpada do dolnego zbiornika fontanny!</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>magiken</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>blekitni</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+			</TriggerGroup>
+		</TriggerGroup>
+		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+			<name>snzmeczenie_gag</name>
+			<script></script>
+			<triggerType>0</triggerType>
+			<conditonLineDelta>0</conditonLineDelta>
+			<mStayOpen>0</mStayOpen>
+			<mCommand></mCommand>
+			<packageName></packageName>
+			<mFgColor>#ff0000</mFgColor>
+			<mBgColor>#ffff00</mBgColor>
+			<mSoundFile></mSoundFile>
+			<colorTriggerFgColor>#000000</colorTriggerFgColor>
+			<colorTriggerBgColor>#000000</colorTriggerBgColor>
+			<regexCodeList />
+			<regexCodePropertyList />
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>snzmeczenie_ty_1</name>
+				<script>deleteLine();
+local zm = matches[2]
+cecho(f("\nTwoje zmeczenie ---&gt;  &lt;green:&gt;{string.upper(zm)}"));</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>2</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#7d63ff</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Rozgladasz sie energicznie, a twoje pelne werwy spojrzenie nie pozostawia watpliwosci co do tego, ze jestes (.*) i gotow[a-z] do dalszej drogi.(\.*)?$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>snzmeczenie_ty_2</name>
+				<script>deleteLine();
+local zm = matches[2]
+cecho(f("\nTwoje meczenie ---&gt;  &lt;yellow:&gt;{string.upper(zm)}"));</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>2</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#7d63ff</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^Pochylasz sie opierajac swe dlonie na kolanach, by zaczerpnac tchu, a twoja strudzona mina wyraznie wskazuje, ze jestes (.*)$</string>
+					<string>^Wzdychajac gleboko starasz sie zaczerpnac nieco nieco tchu i wyrownac ciezki oddech wyraznie sugerujacy, iz jestes (.*)$</string>
+					<string>^Oddychajac plytko przykladasz dlon do skroni ocierajac z niej kilka kropel potu wyraznie sugerujacych, ze jestes (.*)$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>snzmeczenie_ty_3</name>
+				<script>deleteLine();
+local zm = matches[4]
+cecho(f("\nTwoje zmeczenie ---&gt;  &lt;red:&gt;{string.upper(zm)}"));</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>2</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#7d63ff</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.*) oznajmiasz, ze (opadles|opadlas) kompletnie z sil, po czym (.*) zginasz sie w pol i oparlwszy dlonie na kolanach starasz sie uspokoic nierowny oddech.</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>snzmeczenie_team_1</name>
+				<script>deleteLine();
+local zm = matches[4]
+cecho(f("\nZmeczenie ---&gt;  &lt;gray:&gt;{matches[2]} ---&gt;  &lt;green:&gt;{string.upper(zm)}"));</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>2</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#7d63ff</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.*) rozglada sie energicznie, a (jego|jej) pelne werwy spojrzenie nie pozostawia watpliwosci co to tego, ze jest (.*) i (gotowy|gotowa) do dalszej drogi.</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>snzmeczenie_team_3</name>
+				<script>deleteLine();
+local zm = matches[4]
+cecho(f("\nZmeczenie ---&gt;  &lt;gray:&gt;{matches[2]} ---&gt;  &lt;red:&gt;{string.upper(zm)}"));</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>2</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#7d63ff</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.*) ciezkim sapaniem oznajmia, ze (opadl|opadla) kompletnie z sil, po czym (.*) zgina sie w pol i oparlszy dlonie na kolanach stara sie uspokoic nierowny oddech.</string>
+					<string>^(.*) pochyliwszy sie opiera swe dlonie na kolanach, by zaczerpnac tchu, a po j(ego|ej) strudzona minie mozesz wywnioskowac, ze jest (.*)$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>kolorowanie tekstu ra</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#00ffff</mFgColor>
+				<mBgColor>#000000</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>W plytkim zaglebieniu ziemi zauwazasz szeroka szczeline.</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>0</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>gotowosc ra</name>
+				<script>local command = "snprzekaz gotow"
+	if scripts.utils.functional_key ~= command then
+	    scripts.utils.bind_functional(command, false)
+	end</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>wykonuje gesty oznaczajace "gotow" i "pytanie".$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>snzmeczenie_team_2</name>
+				<script>deleteLine();
+local zm = matches[3]
+cecho(f("\nZmeczenie ---&gt;  &lt;gray:&gt;{matches[2]} ---&gt;  &lt;yellow:&gt;{string.upper(zm)}"));</script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>2</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#7d63ff</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList>
+					<string>^(.*) wzdycha gleboko starajac sie zaczerpnac nieco tchu i wyrownac ciezki oddech, ktory wyraznie sugeruje, ze jest (.*)$</string>
+					<string>^(.*) oddychajac plytko przyklada dlon do skroni ocierajac z niej kilka kropel potu sugerujacych, ze jest (.*)$</string>
+				</regexCodeList>
+				<regexCodePropertyList>
+					<integer>1</integer>
+					<integer>1</integer>
+				</regexCodePropertyList>
+			</Trigger>
+		</TriggerGroup>
+	</TriggerPackage>
+	<TimerPackage />
+	<AliasPackage>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>astrolabium</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>ustaw astrolabium</name>
+				<script>Astrolabium.execute_set_astrolabium()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/ustaw_astrolabium$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>sprawdz gwiazdozbiory</name>
+				<script>Astrolabium.initiate_check_directions()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/teleskop$</regex>
+			</Alias>
+		</AliasGroup>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>znaki ra</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>zaslon znaki</name>
+				<script>send("snprzekaz wrog, zaslon")
+
+if ateam.release_guards == true then
+  ateam:switch_releasing_guards()
+end</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/zaslon$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>puszczaj znaki</name>
+				<script>send("snprzekaz bezpiecznie, zaslon")
+
+if ateam.release_guards == false then
+  ateam:switch_releasing_guards()
+end</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/puszczaj$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>gotowosc znaki</name>
+				<script>send("snprzekaz gotow, pytanie")</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/got$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>wlacz puszczanie zaslon</name>
+				<script>ra.auto_switch_releasing_guards = true
+scripts:print_log("Wlaczono puszczanie zaslon po rozkazach RA.")</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/zaslon\+$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>wylacz puszczanie zaslon</name>
+				<script>ra.auto_switch_releasing_guards = false
+scripts:print_log("Wylaczono puszczanie zaslon po rozkazach RA.")</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/zaslon-$</regex>
+			</Alias>
+		</AliasGroup>
+		<Alias isActive="yes" isFolder="no">
+			<name>info o wozie</name>
+			<script>Carriage:show_current_carrige()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/woz$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>ext info o wozach</name>
+			<script>Carriage:show_extended_carriges_info()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/woz\+$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>wylacz poruszanie sie wozem</name>
+			<script>trigger_plugins_zsiadasz_z_wozu()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/woz-$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>lista zlecen</name>
+			<script>ra.alias.show_orders_info()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/ra_zlecenia$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>wysyla liste zlecen na dc</name>
+			<script>ra.alias.send_orders_dc()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/ra_zlecenia_dc$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>czas dc</name>
+			<script>ra.calendar.add_calendar_dc(2)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/czas_dc$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>czas</name>
+			<script>ra.calendar.show_calendar_results({"new_moon_imperial", "full_moon_imperial", "season_imperial", "special_imperial", "full_moon_ishtar", "season_ishtar", "special_ishtar", "spy_ishtar", "fishman_ishtar", "equinox_ishtar", "solstice_ishtar", "treasury_ishtar"}, 3)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/czas$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>czas+</name>
+			<script>ra.calendar.show_calendar_results({"new_moon_imperial", "season_imperial", "special_imperial", "special_imperial", "full_moon_ishtar", "season_ishtar", "special_ishtar", "spy_ishtar", "fishman_ishtar", "equinox_ishtar", "solstice_ishtar", "treasury_ishtar"})</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/czas\+$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>czas w imperium</name>
+			<script>ra.calendar.show_calendar_results({"new_moon_imperial", "season_imperial", "full_moon_imperial", "special_imperial"}, 3)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/czas_imperium$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>czas w imperium+</name>
+			<script>ra.calendar.show_calendar_results({"new_moon_imperial", "season_imperial", "full_moon_imperial", "special_imperial"})</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/czas_imperium\+$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>czas w ishtar+</name>
+			<script>ra.calendar.show_calendar_results({"full_moon_ishtar", "season_ishtar", "special_ishtar", "spy_ishtar", "fishman_ishtar", "equinox_ishtar", "solstice_ishtar"})</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/czas_ishtar\+$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>czas w ishtar</name>
+			<script>ra.calendar.show_calendar_results({"full_moon_ishtar", "season_ishtar", "special_ishtar", "spy_ishtar", "fishman_ishtar", "equinox_ishtar", "solstice_ishtar"}, 3)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/czas_ishtar$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>now</name>
+			<script>ra.calendar.show_calendar_results({"new_moon_imperial"}, 3)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/now$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pory roku</name>
+			<script>ra.calendar.show_calendar_results({"season_ishtar", "season_imperial"})</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/pory_roku$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>ustaw dane autoryzacji ra online</name>
+			<script>ra.alias.set_login_data(matches[2], matches[3])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/ustaw_autoryzacje_ra (.*) (.*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>ustaw nowe dane autoryzacji ra online</name>
+			<script>ra.alias.reset_login_data(matches[2], matches[3])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/ustaw_autoryzacje_ra! (.*) (.*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz informacje o kamieniach</name>
+			<script>ra.alias.show_stone_info()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/baza_kamieni$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz informacje o flakonikach</name>
+			<script>ra.alias.show_bottle_info()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/baza_flakonikow$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>reset kolorow kluczodajek</name>
+			<script>scripts:print_log("Resetuje czerwone ikony kluczodajek w maperze poprzez zaladowanie ostatniej wersji mapy...")
+scripts.installer:download_mapper()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_reset_kolorow$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz lokacje kluczodajek w okolicy</name>
+			<script>ra.core.print_keygivers()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz lokacje kluczodajek w zadanej okolicy</name>
+			<script>ra.core.print_keygivers(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze (.*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz dropy z 24h</name>
+			<script>ra.core.print_drops(24, false)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_zabici$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz dropy z 7 dni</name>
+			<script>ra.core.print_drops(168, false)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_zabici7$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz dropy z ostatnich X h</name>
+			<script>ra.core.print_drops(tonumber(matches[2]), false)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_zabici ([0-9]*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz dostepne kluczodajki z 24h</name>
+			<script>ra.core.print_drops(24, true)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_nastepne$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz dostepne kluczodajki z 7 dni</name>
+			<script>ra.core.print_drops(168, true)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_nastepne7$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz dostepne kluczodajki z ostatnich X h</name>
+			<script>ra.core.print_drops(tonumber(matches[2]), true)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_nastepne ([0-9]*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz waznosc kluczy +1</name>
+			<script>ra.core.print_keytimes(1)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_lista$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz waznosc kluczy +X</name>
+			<script>ra.core.print_keytimes(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_lista ([0-9]*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz znane kluczodajki</name>
+			<script>ra.core.print_keygivers(100000000)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze!$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>szukaj kluczodajki do dodania dropu</name>
+			<script>ra.core.print_add_keygivers(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_szukaj (.*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>dodaj wpis do dropow kluczodajek</name>
+			<script>ra.alias.add_keygivers_drop(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/klucze_dodaj (.*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>/dolegliwosci</name>
+			<script>ra.core.print_detox_list(true)
+</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/dolegliwosci$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>/dolegliwosci!</name>
+			<script>ra.core.print_detox_list(false)
+</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/dolegliwosci!$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>/trad</name>
+			<script>ra.core.print_detox_list_leprosy(true)
+</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/trad$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>/trad!</name>
+			<script>ra.core.print_detox_list_leprosy(false)
+</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/trad!$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>wylaczenie obslugi wrogow</name>
+			<script>ra.alias.disable_enemy_handling()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/ra_wrogowie_wylacz$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>wezwanie do wroga dopisek</name>
+			<script>ra.core_send_mail("obecni", "Wrog", matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/wrog (.*)</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>wezwanie do wroga</name>
+			<script>ra.core_send_mail("obecni", "Wrog", " ")</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/wrog$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>wezwanie do wroga dopisek bez sign</name>
+			<script>ra.core_send_mail_no_sign("obecni", "Wrog", matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/wrog2 (.*)</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>wezwanie do wroga bez sign</name>
+			<script>ra.core_send_mail_no_sign("obecni", "Wrog", " ")</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/wrog2$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>zapros_osoby_nie_bedace_w_druzynie</name>
+			<script>if ateam.normal_ids and table.getn(ateam.normal_ids) &gt; 0 then
+  for k, v in pairs(ateam.people_on_location) do
+    if not ateam.team[k] then
+      ateam:zap_func(k)
+    end
+  end
+else
+  cecho("\n&lt;yellow&gt;Nie ma nikogo, kogo mozna by zaprosic.\n\n")
+end</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/zapr$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>kup i daj bilety druzynie</name>
+			<script>if ateam.normal_ids and table.getn(ateam.normal_ids) &gt; 0 then
+  for k, v in pairs(ateam.people_on_location) do
+    if ateam.team[k] then
+      send("kup bilet")
+      send("daj bilet "..k)
+    end
+  end
+else
+  cecho("\n&lt;yellow&gt;Nie ma nikogo, komu mozna dac bilet.\n\n")
+end</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/kup_bilety$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>snprzekaz</name>
+			<script>local s = ""
+
+s = string.gsub(string.trim(matches[2]), "?", " pytanie ")
+
+s = string.gsub(s, " n ", " polnoc ")
+s = string.gsub(s, " s ", " poludnie ")
+s = string.gsub(s, " e ", " wschod ")
+s = string.gsub(s, " w ", " zachod ")
+s = string.gsub(s, " ne ", " polnocny-wschod ")
+s = string.gsub(s, " nw ", " polnocny-zachod ")
+s = string.gsub(s, " se ", " poludniowy-wschod ")
+s = string.gsub(s, " sw ", " poludniowy-zachod ")
+s = string.gsub(s, " u ", " gora ")
+s = string.gsub(s, " d ", " dol ")
+
+s = string.gsub(s, "  ", " ")
+s = string.gsub(s, " ", ", ")
+s = string.gsub(s, "(%d+)", "liczbe %1")
+
+
+send("snprzekaz "..s)</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^,(.*)</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>odloz magie w ra</name>
+			<script>alias_func_put_magics_down_ra()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/odloz_magie_ra(| do (\w+))$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>sprawdz plaszcze druzyny</name>
+			<script>ra.alias.enable_coat_checker()
+send("ob druzyne")
+tempTimer(3, ra.alias.disable_coat_checker)</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/plaszcze$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>daj x zlotych monety kazdemu czlonkowi druzyny</name>
+			<script>ra.alias.give_gold(matches[2])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/ddajz (.*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>daj x druzynie</name>
+			<script>local t = ""
+for k, v in pairs(ateam.team) do
+  t = table_has_value(gmcp.objects.nums, v)
+  if t and type(v) == "number" then
+    send("daj "..matches[2].." ob_"..v)
+  end
+end</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/ddaj (.*)</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>reczne ladowanie pluginu ra</name>
+			<script>expandAlias("/lua load_plugin('arkadia-ra')")</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/lpra$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>reinstalacja pluginu ra</name>
+			<script>ra.alias.reinstall_plugin()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_przeinstaluj_plugin$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>sprawdz aktualizacje pluginu ra</name>
+			<script>ra.core.check_plugin_update(true)</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_sprawdz_aktualizacje$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pomoc pluginu ra</name>
+			<script>ra.alias.print_help()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_pomoc$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pomoc do aliasow</name>
+			<script>ra.alias.print_help1()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_pomoc_aliasy$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pomoc do kluczy</name>
+			<script>ra.alias.print_help3()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_pomoc_klucze$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pomoc dla kupca</name>
+			<script>ra.alias.print_help4()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_pomoc_kupiec$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pomoc do ziol</name>
+			<script>ra.alias.print_help2()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_pomoc_ziola$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pomoc do kalendarza</name>
+			<script>ra.alias.print_help6()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_pomoc_czas$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pomoc administracyjna</name>
+			<script>ra.alias.print_help5()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_pomoc_admin$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokazuje liste wrogow ra</name>
+			<script>ra.alias.show_ra_enemies()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_pokaz_wrogow$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>przeladuje liste wrogow ra</name>
+			<script>ra.alias.reload_data()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_przeladuj_liste_wrogow$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pobierz dane online ra</name>
+			<script>ra.core.download_all_online_data()</script>
+			<command></command>
+			<packageName>arkadia-ra</packageName>
+			<regex>^/ra_pobierz_dane_online$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>pokaz procent</name>
+			<script>ra.alias.pokaz_procent(tonumber(matches[2]))</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/mpokaz ([0-9]+)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>daj procent komus</name>
+			<script>ra.alias.daj_procent(tonumber(matches[2]), matches[3])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/mdaj ([0-9]+) (.*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>wloz procent gdzies</name>
+			<script>ra.alias.wloz_procent(tonumber(matches[2]), matches[3])</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/mwloz ([0-9]+) (.*)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>ustaw procent kosztow w banku</name>
+			<script>ra.alias.ustaw_procent_banku(tonumber(matches[2]))</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/mustaw ([0-9]+)$</regex>
+		</Alias>
+		<Alias isActive="yes" isFolder="no">
+			<name>usun historie sprzedazy</name>
+			<script>ra.alias.wyczysc_historie_kosztow()</script>
+			<command></command>
+			<packageName></packageName>
+			<regex>^/musun_historie$</regex>
+		</Alias>
+		<AliasGroup isActive="yes" isFolder="yes">
+			<name>ra</name>
+			<script></script>
+			<command></command>
+			<packageName></packageName>
+			<regex></regex>
+			<Alias isActive="yes" isFolder="no">
+				<name>jadalnia_ra</name>
+				<script>ra_scripts:eat_main_room()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/jadalnia_ra$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>razm</name>
+				<script></script>
+				<command>snprzekaz zmeczenie, pytanie</command>
+				<packageName></packageName>
+				<regex>^/razm$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>alderazzi</name>
+				<script>ra_scripts:print_help()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/alderazzi$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>portale</name>
+				<script>cecho("\n\n\n  +----------------------------+-------------------------------+----------------------------+\n")
+cecho("  |                            |                               |                            |\n")
+cecho("  | (imp) --------             |   (imp) Las Hobgoblinow       | (imp) Wezendorf            |\n")
+cecho("  | (ish) Brokilon             |   (ish) Tretogor (zywiolaki)  | (ish) Gelibol              |\n")
+cecho("  |                            |                               |                            |\n")
+cecho("  |                            |                               |                            |\n")
+cecho("  +----------------------------+-------------------------------+----------------------------+\n")
+cecho("  |                            |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|                            |\n")
+cecho("  | (imp) Las obok Kasztelu    |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX| (imp) Twierdza Slaanesha   |\n")
+cecho("  | (ish) Rozrog (pod woda)    |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX| (ish) Gory Sine            |\n")
+cecho("  |                            |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|                            |\n")
+cecho("  |                            |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|                            |\n")
+cecho("  +----------------------------+-------------------------------+----------------------------+\n")
+cecho("  |                            |                               |                            |\n")
+cecho("  | (imp) Khelor (Tilea)       |    (imp) Xavier               | (imp) Pajaki (Gory Czarne) |\n")
+cecho("  | (ish) Baccala              |    (ish) Mahakam              | (ish) Val'Kare             |\n")
+cecho("  |                            |                               |                            |\n")
+cecho("  |                            |                               |                            |\n")
+cecho("  +----------------------------+-------------------------------+----------------------------+\n\n\n")</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/portale$</regex>
+			</Alias>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>portale_kierunki</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>pn</name>
+					<script>sendAll("portal", "n", true)</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/pn$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>pne</name>
+					<script>sendAll("portal", "ne", true)</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/pne$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>pe</name>
+					<script>sendAll("portal", "e", true)</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/pe$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>pse</name>
+					<script>sendAll("portal", "se", true)</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/pse$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>ps</name>
+					<script>sendAll("portal", "s", true)</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/ps$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>psw</name>
+					<script>sendAll("portal", "sw", true)</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/psw$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>pw</name>
+					<script>sendAll("portal", "w", true)</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/pw$</regex>
+				</Alias>
+			</AliasGroup>
+		</AliasGroup>
+	</AliasPackage>
+	<ActionPackage />
+	<ScriptPackage>
+		<ScriptGroup isActive="yes" isFolder="yes">
+			<name>ra</name>
+			<packageName></packageName>
+			<script>ra_scripts = ra_scripts or {}</script>
+			<eventHandlerList />
+			<Script isActive="yes" isFolder="no">
+				<name>food</name>
+				<packageName></packageName>
+				<script>function ra_scripts:eat_main_room()
+  enableTrigger("ra-jadalnia-jedzenie")
+  enableTrigger("ra-jedzenie-pelny")
+  enableTrigger("ra-jedzenie-picie")
+  enableTrigger("ra-jedzenie-napity")
+  tempTimer(0.1, function () send("spojrz", false) end)
+  tempTimer(5, function () ra_scripts:stop_eat_main_room() end)
+end
+
+function ra_scripts:bind_eat_main_room(text)
+  scripts.utils.bind_functional("usiadz przy stole;" .. text, 2, true)
+  scripts.utils.execute_functional()
+end
+
+function ra_scripts:stop_eat_main_room()
+  disableTrigger("ra-jadalnia-jedzenie")
+end</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>signs</name>
+				<packageName></packageName>
+				<script>function ra_scripts:parse_signs(who, whom, str)
+  local signs = scripts.utils:extract_string_list(str)
+  ra_scripts:print_signs(who, whom, signs)
+
+  if who ~= "JA" then
+    ra_scripts:check_fatigue(signs)
+  end
+end
+
+function ra_scripts:print_signs(who, whom, items)
+  cecho("\n&lt;yellow&gt;(Znaki RA)&lt;grey&gt; " .. who .. ": ")
+
+  if whom then
+    cecho ("&lt;LawnGreen&gt;" .. whom .. "&lt;grey&gt; &lt;- ")
+  end
+  
+  local size = table.size(items)
+  local iter = 1
+  for k, v in pairs(items) do
+    --local stripped = string.sub(k, 2, #k-1)
+    local stripped = k:gsub('"', '')
+    cecho("&lt;medium_orchid&gt;" .. stripped)
+    
+    if iter ~= size then
+      cecho("&lt;grey&gt;, ")
+    end
+
+    iter = iter + 1
+  end
+
+  cecho("\n")
+end
+
+function ra_scripts:check_fatigue(items)
+  if items and table.size(items) ~= 2 then
+    return
+  end
+  if items["\"zmeczenie\""] and items["\"pytanie\""] then
+    scripts.utils.bind_functional("snzmeczenie")
+  end
+end</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>help</name>
+				<packageName></packageName>
+				<script>function ra_scripts:print_help()
+  cecho("----------------------------------------------\n")
+  cecho("Alderazzi Pack ver. 1.8\n\n")
+  cecho("&lt;orange&gt;/jadalnia_ra&lt;grey&gt; - jedzenie w jadalni\n")
+  cecho("&lt;orange&gt;/razm&lt;grey&gt; - snprzekaze zmeczenie i pytanie\n\n")
+  cecho("Pondato:\n")
+  cecho(" - Bindowanie przejsc do naszych safe lockow (ebino, viadaza, varieno)\n")
+  cecho(" - Parsowanie bindow 'snprzekaz'\n")
+  cecho(" - Jesli ktos przekaze 'zmeczenie' i 'pytanie' to zbinduje 'snzmeczenie' na ']'\n")
+  cecho(" - Po wejsciu do benicja ']' to 'zapytaj benicja o obecnych'\n")
+  cecho(" - U kazdego sprzedawcy ze zleceniami ']' to 'zapytanie o prace'\n")
+  cecho(" - Pakowanie sprzetu ze zjaw do sarkofagow po zabiciu i po obejrzeniu sarkofagu branie sprzetu (na ']')\n")
+  cecho(" - Podpisywanie sarkofagow w Campogrotta\n")
+  cecho(" - Rozbrajanie sarkofagu w Campogrotta\n")
+  cecho("----------------------------------------------\n")
+end</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>skrzynie-magiki</name>
+				<packageName></packageName>
+				<script>ra_scripts["box_inventory"] = {}</script>
+				<eventHandlerList />
+			</Script>
+			<Script isActive="yes" isFolder="no">
+				<name>klucze</name>
+				<packageName></packageName>
+				<script>MagicKeys = MagicKeys or {
+    triggers = {}
+}
+
+MagicKeys.keysList = {
+    ["duzy ciezki klucz"] = "Seth w Wissenlandzie",
+    ["duzy stalowy klucz"] = "Kultysci w Gorach Czarnych",
+    ["kosciany klucz"] = "Druchii",
+    ["lsniacy zelazny klucz"] = "Kurhan Nekromanty w tilei",
+    ["mosiezny krasnoludzki klucz ze zdobieniami"] = "Nieumarli ZT",
+    ["mosiezny wielki klucz"] = "Baron w Bretonii",
+    ["nieduzy klucz z herbem"] = "Blekitnokrwisci",
+    ["niewielka dziesiecioramienna gwiazde z mosiadzu"] = "Kurhan Mumii pod Varieno",
+    ["niewielka dziesiecioramienna gwiazda z mosiadzu"] = "Kurhan Mumii pod Varieno",
+    ["niewielka karteczke"] = "Wieza kultu Khaina",
+    ["niewielka karteczka"] = "Wieza kultu Khaina",
+    ["podluzny srebrny kluczyk"] = "Demon w Wezendorfie",
+    ["stalowy zardzewialy klucz"] = "Utopce",
+    ["trzyczesciowy grafitowy klucz"] = "Wieza w Gorach Kranca Swiata",
+    ["wielobarwny orczy fetysz"] = "Trolle - Opal",
+    ["zardzewialy duzy klucz"] = "Kanaly Quenelles",
+    ["dlugi skomplikowany klucz"] = "Zywiolaki pod Tretogorem",
+    ["gruby ciezki klucz"] = "Kurhany w Lyrii",
+    ["jadeitowa pieczec"] = "Fort w Lyrii",
+    ["niewielka zamoczona karteczka"] = "Jaskinia zbojow na Baccali",
+    ["niewielka zamoczona karteczke"] = "Jaskinia zbojow na Baccali",
+    ["pordzewialy archaiczny klucz"] = "Ruiny Rinde",
+    ["rozmiekczony zbutwialy pergamin"] = "Zatopiony wrak w morzu na Baccali",
+    ["starozytny elfi pergamin"] = "Grobowiec w Brokillonie",
+    ["wielki kamienny klucz"] = "Smok mahakamski",
+    ["wielki stylizowany klucz"] = "Kurhan w Temerii Czarnotrup",
+    ["zloty klucz"] = "Kurhan w Brokillonie",
+    ["biala pachnaca karteczka"] = "Wiezienie na Baccali",
+    ["biala pachnaca karteczke"] = "Wiezienie na Baccali",
+    ["grafitowa czesc klucza"] = "grafitowy klucz 1/3",
+    ["grafitowy jezyk klucza"] = "grafitowy klucz 1/3",
+    ["grafitowe ucho klucza"] = "grafitowy klucz 1/3",
+    ["krasnoludzka runiczna pieczec"] = "pieczec Mahakam",
+    ["lewa czesc kamiennej pieczeci"] = "1/2 pieczec Mahakam",
+    ["prawa czesc kamiennej pieczeci"] = "1/2 pieczec Mahakam",
+    ["dlugi grafitowy klucz"] = "Wieza GKS",
+    ["zdobiony krysztalowy flakonik"] = "Wiedzma (wypij miksture)",
+    ["fragment pergaminu"] = "Kurhan na bagnach",
+    ["niewielki srebrny klucz"] = "Andreus",
+    ["szklany klucz"] = "Portal",
+    ["czarny obsydianowy klucz"] = "Obsydianowa wieza",
+    ["zelazny ciezki klucz"] = "Wieza pajakow",
+    ["rycerska rodowa tarcza"] = "Obwiesie",
+    ["rycerska rodowa tarcze"] = "Obwiesie",
+    ["rycerskie rodowe tarcze"] = "Obwiesie",
+    ["rycerskich rodowych tarcz"] = "Obwiesie",
+    ["gruby zdobiony klucz z roslinnym wzorem"] = "Druidka",
+    ["pieciokatna srebrna rozdzka"] = "Marcus",
+    ["pieciokatna srebrna rozdzke"] = "Marcus",
+    ["zamknieta podluzna zdobiona skrzynka"] = "Marcus",
+    ["zamknieta podluzna zdobiona skrzynke"] = "Marcus",
+    ["biala bretonska tunika"] = "Tunika Darrepina",
+    ["biala bretonska tunike"] = "Tunika Darrepina",
+    ["duzy zardzewialy klucz"] = "Saurgl",
+    ["rytualny polksiezycowy sierp"] = "Druidzi",
+    ["archaiczna elfia spinka pogrzebowa"] = "Grobowiec w Shekhalu",
+    ["archaiczna elfia spinke pogrzebowa"] = "Grobowiec w Shekhalu",
+    ["zamknieta mosiezna skrzynka z astrolabium"] = "Astrolabium",
+    ["zamknieta mosiezna skrzynke z astrolabium"] = "Astrolabium",
+    ["fragment koralowej plaskorzezby z rybim ogonem"] = "Ryboludzie",
+	["popekana runiczna tabliczka"] = "Raon Amargoth",
+	["skomplikowany klucz ze szklanym zbiorniczkiem"] = "Portale",
+	["stary rycerski sygnet"] = "Wampiry",
+	["zelazny ciezki klucz"] = "Gnomka",
+	["archaiczna elfia spinka pogrzebowa"] = "grobowiec w Shekhalu",
+	["zlowrogi zelazny klucz"] = "Grobowiec Taragorna",
+	["skorzasty siny pecherz"] = "Formici",
+}
+
+function MagicKeys:init()
+    for k, v in pairs(self.triggers) do
+        killTrigger(v)
+    end
+
+    for k, v in pairs(self.keysList) do
+        table.insert(self.triggers, tempRegexTrigger(k, function()
+            selectString(matches[1], 1)
+            creplace(string.format("&lt;%s&gt;%s (%s)&lt;reset&gt;", scripts.inv.magic_keys_color, matches[1], v))
+        end))
+    end
+end
+
+MagicKeys:init()</script>
+				<eventHandlerList />
+			</Script>
+		</ScriptGroup>
+	</ScriptPackage>
+	<KeyPackage />
+	<HelpPackage>
+		<helpURL></helpURL>
+	</HelpPackage>
+</MudletPackage>
