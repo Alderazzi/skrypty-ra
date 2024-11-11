@@ -69,21 +69,23 @@ function ra.core.getJSON(url, headerTable)
   end
   local header = headerTable or {["Content-Type"] = "application/json"}
 
-  if string.find(url, "s3.eu-west-1") then
-    header = false
-  end
-
   scripts.event_handlers["ra_sysGetHttpDone"] = registerAnonymousEventHandler('sysGetHttpDone', ra_core_check_download, true)
   scripts.event_handlers["ra_sysGetHttpError"] = registerAnonymousEventHandler('sysGetHttpError', ra_core_check_download, true)
-  getHTTP(url, header)
+
+  if string.find(url, "s3.eu-west-1", 1, true) then
+    getHTTP(url)
+  else
+    getHTTP(url, header)
+  end
 end
 
 function ra.core.get_url(url)
   local token = ra.tmp.ra_login_token
   local header = {
-    ["Content-Type"] = "application/json"
+    ["Content-Type"] = "application/json",
+    ["Authorization"] = "Bearer " .. token
   }
-  
+
   ra.core.getJSON(url, header)
 end
 

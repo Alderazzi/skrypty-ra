@@ -543,7 +543,7 @@ ra.alias.show_orders_info()</script>
 			</Trigger>
 			<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 				<name>odczytanie zlecenia</name>
-				<script>ra.tmp.orders_pre = matches[3]</script>
+				<script>ra.tmp.orders_pre = matches[4]</script>
 				<triggerType>0</triggerType>
 				<conditonLineDelta>0</conditonLineDelta>
 				<mStayOpen>0</mStayOpen>
@@ -555,9 +555,9 @@ ra.alias.show_orders_info()</script>
 				<colorTriggerFgColor>#000000</colorTriggerFgColor>
 				<colorTriggerBgColor>#000000</colorTriggerBgColor>
 				<regexCodeList>
-					<string>^(.*) do ciebie: Tak, mam pewne pilne zamowienie. Potrzebuje (.*). Dobrze zaplace za kazda sztuke.$</string>
-					<string>^(.*) do ciebie: Tak,MamPewnePilneZamowienie.Potrzebuje(.*).DobrzeZaplaceZaKazdaSztuke.$</string>
-					<string>^(.*) do ciebie: Tak, Mam Pewne Pilne Zamowienie. Potrzebuje (.*). Dobrze Zaplace Za Kazda Sztuke.$</string>
+					<string>^(.*) do ciebie: Tak, mam pewne pilne zamowienie na (.*). Potrzebuje (.*). Dobrze zaplace za kazda sztuke.$</string>
+					<string>^(.*) do ciebie: Tak,MamPewnePilneZamowienie(.*).Potrzebuje(.*).DobrzeZaplaceZaKazdaSztuke.$</string>
+					<string>^(.*) do ciebie: Tak, Mam Pewne Pilne Zamowienie Na (.*). Potrzebuje (.*). Dobrze Zaplace Za Kazda Sztuke.$</string>
 				</regexCodeList>
 				<regexCodePropertyList>
 					<integer>1</integer>

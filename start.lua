@@ -2,7 +2,7 @@ cecho("\n<CadetBlue>(ra)<tomato>: Laduje plugin arkadia-ra\n")
 
 -- definicja globalnych zmiennych
 ra = { 
-  version = "0.127",
+  version = "0.128",
 
   test_stage = false,
   debug = false,
