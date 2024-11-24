@@ -2,6 +2,7 @@ return {
   "start",
   "drop_magic",
   "help",
+  "misc",
 --  "enemy_handling_old",
   "enemy_handling",
 --  "sort_containers",
