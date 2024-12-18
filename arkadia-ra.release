@@ -1,5 +1,6 @@
-{"data":{"plugin":{"version":"0.129","changelog":{
-"0.129":" * dodany highlight pokazujacy ",
+{"data":{"plugin":{"version":"0.130","changelog":{
+"0.130":" * dodane klucze: srebrny ciezki klucz, pekniety osmioscienny klejnot",
+"0.129":" * dodany highlight pokazujacy stan rozdzki od Marcusa",
 "0.128":" * naprawiony trigger zczytujacy zlecenia",
 "0.127":" * przeniesienie skryptow na GitHub\n * poprawienie dzialania Changeloga",
 "0.126":" * zmiana domeny dostepu do danych www",

@@ -3554,6 +3554,8 @@ MagicKeys.keysList = {
 	["archaiczna elfia spinka pogrzebowa"] = "grobowiec w Shekhalu",
 	["zlowrogi zelazny klucz"] = "Grobowiec Taragorna",
 	["skorzasty siny pecherz"] = "Formici",
+	["srebrny ciezki klucz"] = "Grobowiec Parravon",
+	["pekniety osmioscienny klejnot"] = "Miecz Parravon",
 }
 
 function MagicKeys:init()
